@@ -30,7 +30,6 @@ class App extends Component {
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
-      display: 'inline-block'
     };
 
 
@@ -38,11 +37,14 @@ class App extends Component {
       <div className="App" style={style}>
         <h1>Hi, I'm yor First App</h1> 
         <p>This is really working!</p>
+        <UserInput
+        changed={this.nameChangedHandler}/>
+        <UserOutput 
+        username="Max"
+        />
         <UserOutput 
         username={this.state.userName}
         />
-        <UserInput
-        changed={this.nameChangedHandler}/>
         <UserOutput
         username={this.state.userName}
         click={this.switchNameHandler.bind(this, 'Bency Sebastian ')} />
