@@ -5,17 +5,24 @@ import UserInput from './UserInput/UserInput';
 
 class App extends Component {
   state = {
-    name: 'Krishna Bharat'
+    userName: 'Krishna Bharat'
   };
   
+  nameChangedHandler = (event) => {
+    this.setState({
+      userName: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1> 
         <p>This is really working!</p>
         <UserOutput 
-        userName={this.state.name}/>
-        <UserOutput />
+        username={this.state.userName}/>
+        <UserOutput
+        username={this.state.userName} />
       </div>
     );
   }
