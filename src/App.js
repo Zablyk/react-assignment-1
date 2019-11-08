@@ -38,7 +38,8 @@ class App extends Component {
         <h1>Hi, I'm yor First App</h1> 
         <p>This is really working!</p>
         <UserInput
-        changed={this.nameChangedHandler}/>
+        changed={this.nameChangedHandler}
+        currentName={this.state.userName}/>
         <UserOutput 
         username="Max"
         />
